@@ -129,7 +129,7 @@ class UserState extends State<UserDetailWidget> {
                                                   showUser['avatar_url']))),
                                       Container(
                                           margin: EdgeInsets.only(bottom: 10),
-                                          child: Text(showUser['name'])),
+                                          child: showUser['name'] == null ? Text(showUser['login']):Text(showUser['name'])),
                                       Container(
                                         child: showUser['hireable'] != null &&
                                                 showUser['hireable'] == true
